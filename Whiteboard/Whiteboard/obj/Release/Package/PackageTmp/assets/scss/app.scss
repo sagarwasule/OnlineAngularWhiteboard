@@ -1,0 +1,42 @@
+﻿body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.maincontactainer {
+    margin-top: 0px;
+    float: left;
+    width: 100%;
+    position: relative;
+    height: calc(100% - 33px) !important;
+    position: absolute;
+
+    .block-ui-container {
+        opacity: 0.9 !important;
+        top: 50px;
+        height: calc(100% - 50px) !important;
+        width : 100%;
+
+        .block-ui-overlay {
+            opacity: 0.8;
+        }
+
+        .img-responsive {
+            margin: 0 auto;
+            width : inherit;
+            height : inherit;
+
+            img {
+                position: absolute;
+                left: 50%;
+                top: 45%;
+                width: 60px;
+                height: auto;
+                transform: translate(-50%, -45%);
+                -webkit-transform: translate(-50%, -45%);
+                -moz-transform: translate(-50%, -45%);
+                -o-transform: translate(-50%, -45%);
+                -ms-transform: translate(-50%, -45%);
+            }
+        }
+    }
+}

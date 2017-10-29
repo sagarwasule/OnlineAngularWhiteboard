@@ -135,6 +135,8 @@
     </Content>
     <Content Include="Scripts\jquery-1.10.2.min.map" />
     <Content Include="assets\scss\app.scss" />
+    <None Include="Properties\PublishProfiles\app.sagarwasule.in - Web Deploy.pubxml" />
+    <Content Include="resources\locale-en.json" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -240,7 +242,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="app\services\" />
-    <Folder Include="resources\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -1,0 +1,21 @@
+﻿<div ng-init="initializeController()" ng-controller="whiteboardController">
+    <h2>
+        Online Whiteboard
+    </h2>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-2 col-md-1">
+                <div class="btn-toolbar pull-right" role="toolbar" aria-label="...">
+                    <div class="btn-group-vertical" role="group" aria-label="...">
+                        <button type="button" class="btn btn-default" ng-click="openShareUrl()">
+                            <span class="glyphicon glyphicon-share" aria-hidden="true"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-10 col-md-11 pull-left">
+                <whiteboard-canvas share-token="ShareToken" client-id="clientId"></whiteboard-canvas>
+            </div>
+        </div>
+    </div>
+</div>
