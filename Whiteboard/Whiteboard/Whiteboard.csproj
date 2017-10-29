@@ -1,0 +1,284 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{30D23FF3-71C3-4819-B5BC-630C146971A6}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Whiteboard</RootNamespace>
+    <AssemblyName>Whiteboard</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.AI.Agent.Intercept, Version=2.0.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.2.0.6\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.2.0\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.2.0\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.2.0\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.Web, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.2.2.0\lib\net45\Microsoft.AI.Web.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.2.2.0\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.2.2.0\lib\net45\Microsoft.ApplicationInsights.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.SignalR.Core, Version=2.2.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.SignalR.Core.2.2.2\lib\net45\Microsoft.AspNet.SignalR.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.SignalR.SystemWeb, Version=2.2.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.SignalR.SystemWeb.2.2.2\lib\net45\Microsoft.AspNet.SignalR.SystemWeb.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Owin, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.3.0.1\lib\net45\Microsoft.Owin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.3.0.1\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.3.0.1\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="app\modules\whiteboard\services\whiteboardHubService.js" />
+    <Content Include="assets\css\app.css" />
+    <Content Include="assets\images\loader.gif" />
+    <Content Include="packages.config" />
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="assets\scss\app.scss" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <Content Include="Scripts\jquery.signalR-2.2.2.js" />
+    <Content Include="Scripts\jquery.signalR-2.2.2.min.js" />
+    <Content Include="_dependantLibs\angular-block-ui\angular-block-ui.min.js.map" />
+    <Content Include="_dependantLibs\bootstrap\css\bootstrap-theme.css.map" />
+    <Content Include="_dependantLibs\bootstrap\css\bootstrap-theme.min.css.map" />
+    <Content Include="_dependantLibs\bootstrap\css\bootstrap.css.map" />
+    <Content Include="_dependantLibs\bootstrap\css\bootstrap.min.css.map" />
+    <Content Include="_dependantLibs\bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="_dependantLibs\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="_dependantLibs\bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="_dependantLibs\bootstrap\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="_dependantLibs\jquery\jquery-1.9.0.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="application-configuration.js" />
+    <Content Include="app\app.js" />
+    <Content Include="app\configs\app-config.js" />
+    <Content Include="app\configs\app-constants.js" />
+    <Content Include="app\configs\app-routes.js" />
+    <Content Include="app\master\layout.html" />
+    <Content Include="app\master\layoutController.js" />
+    <Content Include="app\modules\account\controller\changePasswordController.js" />
+    <Content Include="app\modules\account\controller\forgotPasswordController.js" />
+    <Content Include="app\modules\account\controller\loginController.js" />
+    <Content Include="app\modules\account\controller\logoutController.js" />
+    <Content Include="app\modules\account\views\changePassword.html" />
+    <Content Include="app\modules\account\views\forgotPassword.html" />
+    <Content Include="app\modules\account\views\login.html" />
+    <Content Include="app\modules\account\views\logout.html" />
+    <Content Include="app\modules\notauthorised\controller\notauthorisedController.js" />
+    <Content Include="app\modules\notauthorised\views\notauthorised.html" />
+    <Content Include="app\modules\notfound\controller\404controller.js" />
+    <Content Include="app\modules\notfound\views\404.html" />
+    <Content Include="app\modules\publichome\controller\homeController.js" />
+    <Content Include="app\modules\publichome\views\home.html" />
+    <Content Include="app\modules\whiteboard\controller\whiteboardController.js" />
+    <Content Include="app\modules\whiteboard\directives\whiteboardDirective.js" />
+    <Content Include="app\modules\whiteboard\views\Whiteboard.html" />
+    <Content Include="app\shared\loader.html" />
+    <Content Include="app\utils\ajax-service.js" />
+    <Content Include="app\utils\app-datasharing-service.js" />
+    <Content Include="app\utils\app-filters.js" />
+    <Content Include="app\utils\app-redirect-service.js" />
+    <Content Include="app\utils\block-ui-service.js" />
+    <Content Include="app\utils\cache-service.js" />
+    <Content Include="app\utils\confirm-modal-service.js" />
+    <Content Include="app\utils\confirm-modal-template.html" />
+    <Content Include="app\utils\cookie-service.js" />
+    <Content Include="app\utils\rest-resources.js" />
+    <Content Include="app\utils\toaster-message-service.js" />
+    <Content Include="app\utils\utility.js" />
+    <Content Include="Index.html" />
+    <Content Include="main.js" />
+    <Content Include="Web.config" />
+    <Content Include="_dependantLibs\angular-block-ui\angular-block-ui.min.css" />
+    <Content Include="_dependantLibs\angular-block-ui\angular-block-ui.min.js" />
+    <Content Include="_dependantLibs\angular-css\angular-css.min.js" />
+    <Content Include="_dependantLibs\angular-google-analytics\angular-google-analytics.min.js" />
+    <Content Include="_dependantLibs\angular-toaster\toaster.min.css" />
+    <Content Include="_dependantLibs\angular-toaster\toaster.min.js" />
+    <Content Include="_dependantLibs\angularjs\angular-animate.min.js" />
+    <Content Include="_dependantLibs\angularjs\angular-cookies.min.js" />
+    <Content Include="_dependantLibs\angularjs\angular-sanitize.min.js" />
+    <Content Include="_dependantLibs\angularjs\angular-translate.min.js" />
+    <Content Include="_dependantLibs\angularjs\angular.min.js" />
+    <Content Include="_dependantLibs\angularjs\angularAMD.min.js" />
+    <Content Include="_dependantLibs\bootstrap\css\bootstrap-theme.css" />
+    <Content Include="_dependantLibs\bootstrap\css\bootstrap-theme.min.css" />
+    <Content Include="_dependantLibs\bootstrap\css\bootstrap.css" />
+    <Content Include="_dependantLibs\bootstrap\css\bootstrap.min.css" />
+    <Content Include="_dependantLibs\bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="_dependantLibs\bootstrap\js\bootstrap.js" />
+    <Content Include="_dependantLibs\bootstrap\js\bootstrap.min.js" />
+    <Content Include="_dependantLibs\bootstrap\js\npm.js" />
+    <None Include="_dependantLibs\jquery\jquery-1.9.0.intellisense.js" />
+    <Content Include="_dependantLibs\jquery\jquery-1.9.0.js" />
+    <Content Include="_dependantLibs\jquery\jquery-1.9.0.min.js" />
+    <Content Include="_dependantLibs\jquery\jquery-ui.js" />
+    <Content Include="_dependantLibs\jquery\jquery.signalR-2.2.2.js" />
+    <Content Include="_dependantLibs\jquery\jquery.signalR-2.2.2.min.js" />
+    <Content Include="_dependantLibs\momentjs\angular-moment.min.js" />
+    <Content Include="_dependantLibs\momentjs\moment-with-locales.js" />
+    <Content Include="_dependantLibs\requirejs\require.js" />
+    <Content Include="_dependantLibs\ui-bootstrap\ui-bootstrap-tpls-2.5.0.min.js" />
+    <Content Include="_dependantLibs\ui-router\angular-ui-router.js" />
+    <Content Include="_dependantLibs\ui-router\angular-ui-router.min.js" />
+    <Content Include="_dependantLibs\ui-router\angular-ui-router.min_bak.js" />
+    <Content Include="_dependantLibs\underscorejs\underscore-min.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Hubs\OnlineHub.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Startup.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="app\services\" />
+    <Folder Include="resources\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>11910</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:11910/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
